@@ -1,0 +1,43 @@
+@home.main("精英团队") {
+
+    <div class="container">
+        <div class="main-box" >
+            <div class="intro-box">
+                @academy.left()
+                <div class="right" style="margin-top: 20px;">
+                    <div class="tittle">
+                        <div class="left">
+                            <p>精英团队</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="team-list">
+                            <ul class="list-items">
+
+                                <li class="list-item academy-elite"  v-for="(value,name) in elite">
+                                    <a :href="'/academy/elitePage/' + name">
+                                        <div class="pic">
+                                            <div class="academy-elite-img-border">
+                                                <div class="academy-elite-img">
+                                                    <img :src="'/assets/images/elite/' + name + '.jpg'" :alt="value"
+                                                    style="border: 0 none;
+                                                        padding: 0">
+                                                </div>
+                                            </div>
+                                            <p><span>{{value}}</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+    </div>
+
+}

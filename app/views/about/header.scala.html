@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="header full">
+        <div class="content">
+            <div class="tittle">
+                <div class="logo">
+                    <img src="/assets/models/images/logo.png" alt="">
+                </div>
+                <div class="unv_name">
+                    <div class="top">
+                        <div class="right">
+                            <p>南京智慧农业研究院</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <p>Nanjing Institute of Smart Agriculture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav" id="nav">
+        <ul class="list-items items_f"  id="vue-list">
+
+            <li class="list-item" style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="home">
+                <a href="@routes.HomeController.homePage()" style="color: #076543;">首页</a>
+            </li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="academy">
+                <a href="#" style="color: #076543;">关于研究院</a>
+                <ul class="sec-list-items header-list" onmouseover="fl_hold(this)" onmouseout="fl_hide(this)" >
+                    <li class="sec-list-item" v-for="(value,name) in academy">
+                        <a :href="'/academy/'+ name">{{value}}</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="business">
+                <a href="#" style="color: #076543;">业务领域</a>
+                <ul class="sec-list-items  header-list" onmouseover="fl_hold(this)" onmouseout="fl_hide(this)">
+                    <li class="sec-list-item" v-for="(value,name) in business">
+                        <a :href="'/business/'+ name">{{value}}</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
+                <a href="@routes.HomeController.guanhuaiPage()" style="color: #076543;">领导关怀</a></li>
+
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="products">
+                <a href="#" style="color: #076543;">产品中心</a>
+                <ul class="sec-list-items header-list" onmouseover="fl_hold(this)" onmouseout="fl_hide(this)"
+                style="width: 350px">
+                    <li class="sec-list-item" v-for="(value,name) in products">
+                        <a :href="'/products/'+ name">{{value}}</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;"><a href="@routes.HomeController.newsPage()" style="color: #076543;">新闻中心</a></li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;"><a href="@routes.HomeController.successPage()" style="color: #076543;">成功案例</a></li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="about">
+                <a href="@routes.HomeController.contactPage()" style="color: #076543;">联系我们</a></li>
+
+        </ul>
+
+    </div>
+</div>
+
+<script>
+                 new Vue({
+                     el: "#vue-list",
+                     data: {
+                         academy: {
+                             introPage: "研究院简介",
+                             speechPage: "董事长致辞",
+                             wenhuaPage: "企业文化",
+                             lichengPage: "发展历程",
+                             zizhiPage: "荣誉资质",
+                             guwenPage: "首席科学家",
+                             elitePage: "精英团队"
+                         },
+                         business: {
+                             nongtianganzhiPage: "大田种植业",
+                             sheshiPage: "设施种植业",
+                             shuichanPage: "水产养殖业",
+                             xumuPage: "畜牧业",
+                             nongchanpinPage: "农产品溯源"
+                         },
+                         products: {
+                             cgmd302Page: "CGMD 302  作物生长监测诊断仪",
+                             cgmd402Page: "CGMD 402  作物生长监测诊断仪",
+                             cgmd502Page: "CGMD 502  作物生长监测诊断设备",
+                             chezaiPage: "车载式作物生长监测诊断设备",
+                             wurenjiPage: "无人机载式作物生长监测诊断设备",
+                             zhihuiPage: "智慧农作平台",
+                             nongyexinxiPage: "农业空间信息管理系统",
+                             zuowuguanliPage: "作物精确管理系统",
+                             yaoganPage: "农情遥感监测与定量诊断系统",
+                             moniPage: "作物生长模拟与决策支持系统"
+                         },
+                         elite:{
+                             nijun:"倪军",
+                             yaoxia:"姚霞",
+                             zhangxiaohu:"张小虎",
+                             caoqiang:"曹强",
+                             zhanglanping:"张兰平",
+                             wanghongting:"王洪庭",
+                             caoyongheng:"曹永恒"
+                         }
+                     }
+                 });
+
+                $(function () {
+                    var href = window.location.href;
+                    var array = href.split("/");
+                    if (array.length < 5) {
+                        $("#home").addClass("active");
+                    } else {
+                        $("#" + array[3]).addClass("active");
+                    }
+                })
+        </script>

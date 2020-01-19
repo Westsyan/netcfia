@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="header full">
+        <div class="content">
+            <div class="tittle">
+                <div class="logo">
+                    <img src="/assets/models/images/logo.png" alt="">
+                </div>
+                <div class="unv_name">
+                    <div class="top">
+                        <div class="right">
+                            <p>南京智慧农业研究院</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <p>Nanjing Institute of Smart Agriculture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav" id="nav">
+        <ul class="list-items items_f">
+
+            <li class="list-item" style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="home">
+                <a href="@routes.HomeController.homePage()" style="color: #076543;">首页</a>
+            </li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="academy">
+                <a href="#" style="color: #076543;">关于研究院</a>
+                <ul class="sec-list-items header-list" onmouseover="fl_hold(this)" onmouseout="fl_hide(this)" >
+                    <li class="sec-list-item" v-for="(value,name) in academy">
+                        <a :href="'/academy/'+ name">{{value}}</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="business">
+                <a href="#" style="color: #076543;">业务领域</a>
+                <ul class="sec-list-items  header-list" onmouseover="fl_hold(this)" onmouseout="fl_hide(this)">
+                    <li class="sec-list-item" v-for="(value,name) in business">
+                        <a :href="'/business/'+ name">{{value}}</a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="guanhuai">
+                <a href="@routes.HomeController.guanhuaiPage()" style="color: #076543;">领导关怀</a></li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="products">
+                <a href="#" style="color: #076543;">产品中心</a>
+                <ul class="sec-list-items header-list" onmouseover="fl_hold(this)" onmouseout="fl_hide(this)"
+                style="width: 350px">
+                    <li class="sec-list-item" v-for="(value,name) in products">
+                        <a :href="'/products/'+ name">{{value}}</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="news"><a href="@routes.HomeController.newsPage()" style="color: #076543;">新闻中心</a></li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="success"><a href="@routes.HomeController.successPage()" style="color: #076543;">成功案例</a></li>
+
+            <li class="list-item " style="width: 176.857px;
+                background: rgb(255, 255, 255) none repeat scroll 0% 0%;" id="about">
+                <a href="@routes.HomeController.contactPage()" style="color: #076543;">联系我们</a></li>
+
+        </ul>
+
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+<div class="left" style="width: 300px;">
+    <ul class="list-items items_bar">
+
+        <li class="list-item" v-for="(value,name) in products" :id="name">
+            <a :href="'/products/'+ name"><p>{{value}}</p></a>
+        </li>
+
+    </ul>
+</div>
+

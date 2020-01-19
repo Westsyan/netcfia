@@ -1,0 +1,109 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("../../../public/images/favicon.png")">
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/common-out.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/index.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/jquery.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/r-style.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("font-awesome-4.7.0/css/font-awesome.min.css")">
+
+        <script src="@routes.Assets.versioned("models/js/jquery_004.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/model_g.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/counter.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_003.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/bootstrap.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_002.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_005.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_006.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/openlink.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/qrcode.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/top.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("vue/vue.js")" type ="text/javascript"></script>
+
+    </head>
+    <body>
+<div>
+
+        <div id="vue-list">
+
+            @home.header()
+
+            @content
+
+            @home.footer()
+
+        </div>
+        <script>
+                new Vue({
+                    el: "#vue-list",
+                    data: {
+                        academy: {
+                            introPage: "研究院简介",
+                            speechPage: "董事长致辞",
+                            wenhuaPage: "企业文化",
+                            lichengPage: "发展历程",
+                            zizhiPage: "荣誉资质",
+                            guwenPage: "首席科学家",
+                            elitePage: "精英团队"
+                        },
+                        business: {
+                            nongtianganzhiPage: "大田种植业",
+                            sheshiPage: "设施种植业",
+                            shuichanPage: "水产养殖业",
+                            xumuPage: "畜牧业",
+                            nongchanpinPage: "农产品溯源"
+                        },
+                        datian: {
+                            nongtianganzhiPage: "农田感知与智慧管理",
+                            shengzhangyucePage: "基于模型的作物生长预测与精确管理技术",
+                            guangpujiancePage: "作物生长指标光谱监测与定量诊断技术",
+                            shengchanliPage: "我国稻麦主产区生产力与产量差时空分布特征"
+                        },
+                        products: {
+                            cgmd302Page: "CGMD 302  作物生长监测诊断仪",
+                            cgmd402Page: "CGMD 402  作物生长监测诊断仪",
+                            cgmd502Page: "CGMD 502  作物生长监测诊断设备",
+                            chezaiPage: "车载式作物生长监测诊断设备",
+                            wurenjiPage: "无人机载式作物生长监测诊断设备",
+                            zhihuiPage: "智慧农作平台",
+                            nongyexinxiPage: "农业空间信息管理系统",
+                            zuowuguanliPage: "作物精确管理系统",
+                            yaoganPage: "农情遥感监测与定量诊断系统",
+                            moniPage: "作物生长模拟与决策支持系统"
+                        },
+                        elite:{
+                            nijun:"倪军",
+                            yaoxia:"姚霞",
+                            zhangxiaohu:"张小虎",
+                            caoqiang:"曹强",
+                            zhanglanping:"张兰平",
+                            wanghongting:"王洪庭",
+                            caoyongheng:"曹永恒"
+                        }
+                    }
+                });
+
+                $(function () {
+                    var href = window.location.href;
+                    var array = href.split("/");
+                    if (array.length < 5) {
+                        $("#home").addClass("active");
+                    } else {
+                        $("#" + array[3]).addClass("active");
+                        $("#" + array[4]).addClass("active");
+                    }
+                })
+        </script>
+</div>
+
+
+
+    </body>
+</html>

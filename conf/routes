@@ -1,0 +1,59 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET        /                                      controllers.HomeController.homePage
+GET        /news/newsPage                         controllers.HomeController.newsPage
+GET        /success/successPage                   controllers.HomeController.successPage
+GET        /about/contactPage                     controllers.HomeController.contactPage
+
+GET        /sliderx/productPage                   controllers.HomeController.productPage
+GET        /sliderx/fruitPage                     controllers.HomeController.fruitPage
+
+
+GET        /academy/introPage                     controllers.AcademyController.introPage
+GET        /academy/speechPage                    controllers.AcademyController.speechPage
+GET        /academy/elitePage                     controllers.AcademyController.elitePage
+GET        /academy/elitePage/nijun               controllers.AcademyController.nijun
+GET        /academy/elitePage/yaoxia              controllers.AcademyController.yaoxia
+GET        /academy/elitePage/zhangxiaohu         controllers.AcademyController.zhangxiaohu
+GET        /academy/elitePage/caoqiang            controllers.AcademyController.caoqiang
+GET        /academy/elitePage/zhanglanping        controllers.AcademyController.zhanglanping
+GET        /academy/elitePage/wanghongting        controllers.AcademyController.wanghongting
+GET        /academy/elitePage/caoyongheng         controllers.AcademyController.caoyongheng
+GET        /academy/wenhuaPage                    controllers.AcademyController.wenhuaPage
+GET        /academy/lichengPage                   controllers.AcademyController.lichengPage
+GET        /academy/zizhiPage                     controllers.AcademyController.zizhiPage
+GET        /academy/guanhuaiPage                  controllers.AcademyController.guanhuaiPage
+GET        /academy/guwenPage                     controllers.AcademyController.guwenPage
+
+GET        /business/nongtianganzhiPage           controllers.BusinessController.nongtianganzhiPage
+GET        /business/shengzhangyucePage           controllers.BusinessController.shengzhangyucePage
+GET        /business/guangpujiancePage            controllers.BusinessController.guangpujiancePage
+GET        /business/shengchanliPage              controllers.BusinessController.shengchanliPage
+GET        /business/sheshiPage                   controllers.BusinessController.sheshiPage
+GET        /business/shuichanPage                 controllers.BusinessController.shuichanPage
+GET        /business/xumuPage                     controllers.BusinessController.xumuPage
+GET        /business/nongchanpinPage              controllers.BusinessController.nongchanpinPage
+
+GET        /products/cgmd302Page                  controllers.ProductsController.cgmd302Page
+GET        /products/cgmd402Page                  controllers.ProductsController.cgmd402Page
+GET        /products/cgmd502Page                  controllers.ProductsController.cgmd502Page
+GET        /products/chezaiPage                   controllers.ProductsController.chezaiPage
+GET        /products/wurenjiPage                  controllers.ProductsController.wurenjiPage
+GET        /products/zhihuiPage                   controllers.ProductsController.zhihuiPage
+GET        /products/nongyexinxiPage              controllers.ProductsController.nongyexinxiPage
+GET        /products/zuowuguanliPage              controllers.ProductsController.zuowuguanliPage
+GET        /products/yaoganPage                   controllers.ProductsController.yaoganPage
+GET        /products/moniPage                     controllers.ProductsController.moniPage
+
+GET        /guanhuai/guanhuaiPage                 controllers.HomeController.guanhuaiPage
+
+GET        /images/getImageByPath                 controllers.ImageController.getImageByPath(name:String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file                          controllers.Assets.versioned(path="/public", file: Asset)
+
+      

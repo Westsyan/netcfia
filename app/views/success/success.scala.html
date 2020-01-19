@@ -1,0 +1,58 @@
+@home.main("成功案例") {
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("fancybox/jquery.fancybox.css")">
+        <script src="@routes.Assets.versioned("fancybox/jquery.fancybox.js")" type="text/javascript"></script>
+
+    <div class="container">
+        <div class="main-box">
+            <div class="intro-box">
+
+                <div class="right"  style="margin-top: 20px;width: 1200px">
+                    <div class="tittle">
+                        <div class="left">
+                            <p>成功案例</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-box">
+                            <div class="product-text">
+
+                            <h2 style="text-align: left">【作物精确管理技术在江苏兴化的应用】：</h2>
+                            <p style="text-indent: 2em;margin-top: 10px;">
+                                南京农业大学国家信息农业工程技术中心经过十余年的研究开发，建立了作物生长监测诊断与精确栽培技术体系。该技术可对作物生长过程中的综合苗情信息进行实时感知和精确管理，以实现作物播前栽培方案的定量化设计和生长指标的智能化诊断。包括作物生长指标光谱监测和生长状况诊断调控2大核心技术，以及作物栽培方案设计和产量品质预测2大配套技术。自2014年起，兴化就成为稻麦生长监测诊断与精确栽培技术的核心示范基地。</p>
+                            <p style="text-indent: 2em;">2014年至今，重点在兴化粮食产业园开展了稻麦生长监测诊断与精确栽培技术的示范应用。在作物播栽前，根据土壤基础肥力情况和主栽品种设计生成了精确管理田块的栽培方案；在作物生长中期，通过作物生长监测诊断仪、无人机平台、农田物联网等获取拔节期群体LAI、叶片氮积累量等苗情长势信息，运行系统诊断调控功能，生成产中的追肥管理方案（穗肥）。同时，根据土壤基础肥力情况和主栽品种设计全市稻麦栽培管理处方图（基本苗及肥料运筹方案等），并基于遥感影像监测关键生育期稻麦长势，生成追肥管理处方及产量品质预测图等，应用于全县大面积生产。下图为核心区航拍图。</p>
+
+                                <a v-for="n in 16" data-fancybox="one" :href="'/images/getImageByPath?name=xinghua/' + n +'.jpg'">
+                                    <img :src="'/images/getImageByPath?name=xinghua/'+n+'.jpg'" width="18%"
+                                    style="margin-right: 1%;margin-left: 1%;margin-top: 20px" />
+                                </a>
+
+                                <h2 style="text-align: left;margin-top: 10px">【江苏省土壤基础肥力分布图】：</h2>
+                                <a v-for="n in 4" data-fancybox="two" :href="'/images/getImageByPath?name=xinghua/' + (n+16) +'.jpg'">
+                                    <img :src="'/images/getImageByPath?name=xinghua/'+(n+16)+'.jpg'" width="18%"
+                                    style="margin-right: 1%;margin-left: 1%;margin-top: 20px" />
+                                </a>
+                                <h2 style="text-align: left;margin-top: 10px">【江苏省水稻遥感图】：</h2>
+                                <a v-for="n in 7" data-fancybox="three" :href="'/images/getImageByPath?name=xinghua/' + (n+20) +'.jpg'">
+                                    <img :src="'/images/getImageByPath?name=xinghua/'+(n+20)+'.jpg'" width="18%"
+                                    style="margin-right: 1%;margin-left: 1%;margin-top: 20px" />
+                                </a>
+                                <h2 style="text-align: left;margin-top: 10px">【2019年江苏省小麦拔节期长势监测及追肥施用量推荐处方图】：</h2>
+                                <a v-for="n in 3" data-fancybox="four" :href="'/images/getImageByPath?name=xinghua/' + (n+27) +'.jpg'">
+                                    <img :src="'/images/getImageByPath?name=xinghua/'+(n+27)+'.jpg'" width="18%"
+                                    style="margin-right: 1%;margin-left: 1%;margin-top: 20px" />
+                                </a>
+                                <h2 style="text-align: left;margin-top: 10px">【2019年江苏省小麦抽穗期长势监测及产量品质预测图】：</h2>
+                                <a v-for="n in 4" data-fancybox="five" :href="'/images/getImageByPath?name=xinghua/' + (n+30) +'.jpg'">
+                                    <img :src="'/images/getImageByPath?name=xinghua/'+(n+30)+'.jpg'" width="18%"
+                                    style="margin-right: 1%;margin-left: 1%;margin-top: 20px" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+}

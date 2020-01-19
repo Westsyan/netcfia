@@ -1,0 +1,44 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("../../../public/images/favicon.png")">
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/common-out.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/index.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/jquery.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("models/css/r-style.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("font-awesome-4.7.0/css/font-awesome.min.css")">
+
+        <script src="@routes.Assets.versioned("models/js/jquery_004.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/model_g.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/counter.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_003.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/bootstrap.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_002.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_005.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/jquery_006.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/openlink.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/qrcode.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("models/js/top.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("vue/vue.js")" type ="text/javascript"></script>
+
+    </head>
+    <body>
+
+
+            @about.header()
+
+            @content
+
+            @home.footer()
+
+
+
+
+    </body>
+</html>
